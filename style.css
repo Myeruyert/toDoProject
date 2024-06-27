@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 92%;
+  height: 90%;
+  border: 1px solid white;
+}
+
+.containerBox {
+  border: 1px solid red;
+}
+
+.box {
+  border: 1px solid green;
+}
