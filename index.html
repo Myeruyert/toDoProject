@@ -10,73 +10,95 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/7f03016920.js" crossorigin="anonymous"></script>
     <title>To Do Project</title>
   </head>
-  <body>
+  <body class="text-white">
     <section class="bg-dark d-flex align-items-center">
       <main class="m-auto">
         <div class="d-flex justify-content-end mb-4">
           <button class="add btn btn-success">Add task</button>
         </div>
-        <div class="containerBox d-flex justify-content-between">
-          <div class="box col">
-            <div>
-              <h2></h2>
-              <div class="repeat"></div>
+        <div class="containerBox d-flex justify-content-between gap-4">
+          <div class="box col bg-black border border-secondary rounded p-sm-3">
+            <div class="d-flex justify-content-between">
+              <h2 class="header">
+                <i class="fa-solid fa-circle align-middle"></i><span class="ms-2">To Do</span></h2>
+              <p class="text-white-50 repeat fs-6">5</p>
             </div>
             <div class="taskList">
-              <div class="task">
-                <input type="checkbox" name="" id="" />
-                <p></p>
-                <button class="edit"></button>
-                <button class="delete"></button>
+              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
+                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
+                <span class="text-white-50">[Loan management]- Add a card component</span>
+                <button class="edit text-white-50 bg-transparent border-0 fs-6">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="delete text-danger bg-transparent border-0 fs-6">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
               </div>
             </div>
           </div>
-          <div class="box col">
-            <div>
-              <h2></h2>
-              <div class="repeat"></div>
+          <div class="box col bg-black border border-secondary rounded p-sm-3">
+            <div class="d-flex justify-content-between">
+              <h2 class="header">
+                <i class="fa-solid fa-circle align-middle text-warning"></i><span class="ms-2">In Progress</span></h2>
+              <p class="text-white-50 repeat fs-6">5</p>
             </div>
             <div class="taskList">
-              <div class="task">
-                <input type="checkbox" name="" id="" />
-                <p></p>
-                <button class="edit"></button>
-                <button class="delete"></button>
+              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
+                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
+                <span class="text-white-50">[Loan management]- Add a card component</span>
+                <button class="edit text-white-50 bg-transparent border-0 fs-6">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="delete text-danger bg-transparent border-0 fs-6">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
               </div>
             </div>
           </div>
-          <div class="box col">
-            <div>
-              <h2></h2>
-              <div class="repeat"></div>
+          <div class="box col bg-black border border-secondary rounded p-sm-3">
+            <div class="d-flex justify-content-between">
+              <h2 class="header">
+                <i class="fa-solid fa-circle align-middle text-success"></i><span class="ms-2">Done</span></h2>
+              <p class="text-white-50 repeat fs-6">5</p>
             </div>
             <div class="taskList">
-              <div class="task">
-                <input type="checkbox" name="" id="" />
-                <p></p>
-                <button class="edit"></button>
-                <button class="delete"></button>
+              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
+                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
+                <span class="text-white-50">[Loan management]- Add a card component</span>
+                <button class="edit text-white-50 bg-transparent border-0 fs-6">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="delete text-danger bg-transparent border-0 fs-6">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
               </div>
             </div>
           </div>
-          <div class="box col">
-            <div>
-              <h2></h2>
-              <div class="repeat"></div>
+          <div class="box col bg-black border border-secondary rounded p-sm-3">
+            <div class="d-flex justify-content-between">
+              <h2 class="header">
+                <i class="fa-solid fa-circle align-middle text-danger"></i><span class="ms-2">Blocked</span></h2>
+              <p class="text-white-50 repeat fs-6">5</p>
             </div>
             <div class="taskList">
-              <div class="task">
-                <input type="checkbox" name="" id="" />
-                <p></p>
-                <button class="edit"></button>
-                <button class="delete"></button>
+              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
+                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
+                <span class="text-white-50">[Loan management]- Add a card component</span>
+                <button class="edit text-white-50 bg-transparent border-0 fs-6">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="delete text-danger bg-transparent border-0 fs-6">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </main>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>

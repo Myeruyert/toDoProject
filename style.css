@@ -12,13 +12,21 @@ section {
 main {
   width: 92%;
   height: 90%;
-  border: 1px solid white;
 }
 
-.containerBox {
-  border: 1px solid red;
+.header {
+  font-size: 18px;
 }
 
 .box {
-  border: 1px solid green;
+  height: 27rem;
+}
+
+.fa-circle {
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.task {
+  font-size: 12px;
 }
