@@ -1,12 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 section {
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
 
 main {
@@ -18,8 +13,8 @@ main {
   font-size: 18px;
 }
 
-.box {
-  height: 27rem;
+.box-height {
+  height: 40rem;
 }
 
 .fa-circle {
@@ -30,3 +25,29 @@ main {
 .task {
   font-size: 12px;
 }
+
+.taskAdder {
+  width: 370px;
+  height: 376px;
+  position: absolute;
+  padding: 40px;
+}
+
+input,
+.submit {
+  width: 290px;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+.display {
+  display: none;
+}
+/* d-none */
+
+.transparented {
+  opacity: 0.3;
+}
+/* opacity-25 */

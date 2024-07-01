@@ -10,26 +10,39 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/7f03016920.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7f03016920.js"
+      crossorigin="anonymous"
+    ></script>
     <title>To Do Project</title>
   </head>
   <body class="text-white">
-    <section class="bg-dark d-flex align-items-center">
-      <main class="m-auto">
+    <section class="bg-dark d-flex align-items-center justify-content-center">
+      <main class="m-auto main">
         <div class="d-flex justify-content-end mb-4">
           <button class="add btn btn-success">Add task</button>
         </div>
-        <div class="containerBox d-flex justify-content-between gap-4">
-          <div class="box col bg-black border border-secondary rounded p-sm-3">
+        <div class="container d-flex gap-4">
+          <div
+            class="box-height col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
+          >
             <div class="d-flex justify-content-between">
               <h2 class="header">
-                <i class="fa-solid fa-circle align-middle"></i><span class="ms-2">To Do</span></h2>
+                <i class="fa-solid fa-circle align-middle"></i
+                ><span class="ms-2">To Do</span>
+              </h2>
               <p class="text-white-50 repeat fs-6">5</p>
             </div>
-            <div class="taskList">
-              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
-                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
-                <span class="text-white-50">[Loan management]- Add a card component</span>
+            <div class="taskToDoList">
+              <div
+                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
+              >
+                <button class="checkbox text-white-50 bg-transparent border-0">
+                  <i class="fa-regular fa-circle fs-6"></i>
+                </button>
+                <span class="text-white-50"
+                  >[Loan management]- Add a card component</span
+                >
                 <button class="edit text-white-50 bg-transparent border-0 fs-6">
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -39,16 +52,26 @@
               </div>
             </div>
           </div>
-          <div class="box col bg-black border border-secondary rounded p-sm-3">
+          <div
+            class="box-height col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
+          >
             <div class="d-flex justify-content-between">
               <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-warning"></i><span class="ms-2">In Progress</span></h2>
+                <i class="fa-solid fa-circle align-middle text-warning"></i
+                ><span class="ms-2">In Progress</span>
+              </h2>
               <p class="text-white-50 repeat fs-6">5</p>
             </div>
-            <div class="taskList">
-              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
-                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
-                <span class="text-white-50">[Loan management]- Add a card component</span>
+            <div class="taskProgressList">
+              <div
+                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
+              >
+                <button class="checkbox text-white-50 bg-transparent border-0">
+                  <i class="fa-regular fa-circle fs-6"></i>
+                </button>
+                <span class="text-white-50"
+                  >[Loan management]- Add a card component</span
+                >
                 <button class="edit text-white-50 bg-transparent border-0 fs-6">
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -58,16 +81,26 @@
               </div>
             </div>
           </div>
-          <div class="box col bg-black border border-secondary rounded p-sm-3">
+          <div
+            class="box col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
+          >
             <div class="d-flex justify-content-between">
               <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-success"></i><span class="ms-2">Done</span></h2>
+                <i class="fa-solid fa-circle align-middle text-success"></i
+                ><span class="ms-2">Done</span>
+              </h2>
               <p class="text-white-50 repeat fs-6">5</p>
             </div>
-            <div class="taskList">
-              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
-                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
-                <span class="text-white-50">[Loan management]- Add a card component</span>
+            <div class="taskDoneList">
+              <div
+                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
+              >
+                <button class="checkbox text-white-50 bg-transparent border-0">
+                  <i class="fa-regular fa-circle fs-6"></i>
+                </button>
+                <span class="text-white-50"
+                  >[Loan management]- Add a card component</span
+                >
                 <button class="edit text-white-50 bg-transparent border-0 fs-6">
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -77,16 +110,26 @@
               </div>
             </div>
           </div>
-          <div class="box col bg-black border border-secondary rounded p-sm-3">
+          <div
+            class="box col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
+          >
             <div class="d-flex justify-content-between">
               <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-danger"></i><span class="ms-2">Blocked</span></h2>
+                <i class="fa-solid fa-circle align-middle text-danger"></i
+                ><span class="ms-2">Blocked</span>
+              </h2>
               <p class="text-white-50 repeat fs-6">5</p>
             </div>
-            <div class="taskList">
-              <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
-                <button class="checkbox text-white-50 bg-transparent border-0"> <i class="fa-regular fa-circle fs-6"></i></button>
-                <span class="text-white-50">[Loan management]- Add a card component</span>
+            <div class="taskBlockedList">
+              <div
+                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
+              >
+                <button class="checkbox text-white-50 bg-transparent border-0">
+                  <i class="fa-regular fa-circle fs-6"></i>
+                </button>
+                <span class="text-white-50"
+                  >[Loan management]- Add a card component</span
+                >
                 <button class="edit text-white-50 bg-transparent border-0 fs-6">
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -98,7 +141,33 @@
           </div>
         </div>
       </main>
+
+      <div class="taskAdder display bg-dark rounded m-auto">
+        <h4>Enter Task</h4>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Task name.."
+          class="my-2 bg-transparent border border-secondary"
+        />
+        <input
+          type="tel"
+          name=""
+          id=""
+          placeholder="Select status"
+          class="my-2 bg-transparent border border-secondary"
+        />
+        <button class="submit btn btn-success mt-4 text-center fs-6">
+          Submit
+        </button>
+      </div>
     </section>
     <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
