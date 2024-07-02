@@ -4,17 +4,16 @@ const taskProgressList = document.getElementById("taskProgressList");
 const taskDoneList = document.getElementById("taskDoneList");
 const taskBlockedList = document.getElementById("taskBlockedList");
 const addTaskBtn = document.getElementById("addTaskBtn");
-const newTaskCard = { name: "Task Four", status: "DONE" };
+const saveBtn = document.getElementById("save-btn");
+const taskInput = document.getElementById("task-input");
+const taskStatus = document.getElementById("status");
 
 // VARIABLES FOR TASK
 const tasks = [
   {
-    name: "Task One",
-    status: "TODO",
-  },
-  {
     name: "Task Two",
     status: "INPROGRESS",
+    border: "YELLOW",
   },
   {
     name: "Task Three",
@@ -22,31 +21,36 @@ const tasks = [
   },
 ];
 
-function draw() {
+function zurah() {
   taskTodoList.innerHTML = "";
   taskProgressList.innerHTML = "";
   taskDoneList.innerHTML = "";
   taskBlockedList.innerHTML = "";
 
   for (let i = 0; i < tasks.length; i++) {
+    console.log("i", i);
     console.log("TASKS", tasks);
     const newTaskCard = `
-    <div class="d-flex justify-content-between align-items-center border border-1 rounded p-2">
-    <span>${tasks[i].name}</span>
+    <div class="d-flex justify-content-between align-items-center border border-1 rounded p-2 ${statusColor(
+      tasks[i].status
+    )}"}>
+    <span>${tasks[i].name} - ${i}</span>
     <div>
-        <button class="btn">
+        <button class="btn" onclick={editTask()}>
         <i class="bi bi-pencil"></i>
         </button>
-        <button class="btn">
+        <button class="btn" onclick={deleteTask(${i})}>
         <i class="bi bi-trash"></i>
         </button>
     </div>
     </div>
  `;
+    console.log("n0", newTaskCard);
 
     switch (tasks[i].status) {
       case "TODO": {
         taskTodoList.innerHTML += newTaskCard;
+
         break;
       }
       case "INPROGRESS": {
@@ -65,16 +69,47 @@ function draw() {
         console.log("ALDAA GARLAA");
       }
     }
+
+    function statusColor(status) {
+      switch (status) {
+        case "TODO": {
+          return "border-black";
+        }
+        case "INPROGRESS": {
+          return "border-warning";
+        }
+        case "DONE": {
+          return "border-success";
+        }
+        case "BLOCKED": {
+          return "border-danger";
+        }
+        default: {
+          console.log("ALDAA GARLAA");
+        }
+      }
+    }
   }
 }
 
-addTaskBtn.addEventListener("click", function () {
-  //   tasks[1].status = "DONE";
-  //   draw();
+saveBtn.addEventListener("click", function () {
+  const newTask = {
+    name: taskInput.value,
+    status: taskStatus.value,
+  };
+  tasks.push(newTask);
+  zurah();
   console.log("TASKS", tasks);
-  tasks.push(newTaskCard);
-  console.log("tasks", tasks);
-  draw();
 });
 
-draw();
+zurah();
+
+function editTask() {
+  console.log("edit");
+}
+
+function deleteTask(taskIndex) {
+  console.log("ti", taskIndex);
+  tasks.splice(taskIndex, 1);
+  zurah();
+}

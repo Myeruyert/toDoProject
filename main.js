@@ -15,6 +15,10 @@ const main = document.getElementsByClassName("main")[0];
 const submit = document.getElementsByClassName("submit")[0];
 
 const toDoListEl = document.getElementsByClassName("taskToDoList")[0];
+const taskTodoList = document.getElementById("taskTodoList");
+const taskProgressList = document.getElementById("taskProgressList");
+const taskDoneList = document.getElementById("taskDoneList");
+const taskBlockedList = document.getElementById("taskBlockedList");
 //
 
 // taskBox = document.createElement("div");
@@ -22,10 +26,10 @@ const toDoListEl = document.getElementsByClassName("taskToDoList")[0];
 // outsideBox.appendChild(taskBox);
 
 //EVENTLISTENER
-addTask.addEventListener("click", () => {
-  insertTask.classList.toggle("display");
-  main.classList.toggle("transparented");
-});
+// addTask.addEventListener("click", () => {
+//   insertTask.classList.toggle("display");
+//   main.classList.toggle("transparented");
+// });
 
 toDoListEl.innerHTML = `
     <div class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2">
@@ -43,3 +47,14 @@ toDoListEl.innerHTML = `
         </button>
     </div>
 `;
+
+const tasks = [
+  {
+    name: "Task Two",
+    status: "INPROGRESS",
+  },
+  {
+    name: "Task Three",
+    status: "BLOCKED",
+  },
+];

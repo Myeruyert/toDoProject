@@ -20,6 +20,8 @@
     <section class="bg-dark d-flex align-items-center justify-content-center">
       <main class="m-auto main">
         <div class="d-flex justify-content-end mb-4">
+          <!-- data-bs-toggle="modal"
+          data-bs-target="#taskModal" -->
           <button class="add btn btn-success">Add task</button>
         </div>
         <div class="container d-flex gap-4">
@@ -163,6 +165,68 @@
         </button>
       </div>
     </section>
+    <!-- modal -->
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="taskModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Task</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Title</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="task-input"
+              placeholder="add new task"
+            />
+            <select name="status" id="status">
+              <option value="TODO">To do</option>
+              <option value="INPROGRESS">Хийж байгаа</option>
+              <option value="DONE">Done</option>
+              <option value="BLOCKED">Blocked</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <!-- <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button> -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="save-btn"
+              data-bs-dismiss="modal"
+            >
+              Хадгалах
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal-end -->
     <script src="./main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
