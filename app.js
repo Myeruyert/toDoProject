@@ -9,11 +9,16 @@ const taskInput = document.getElementById("task-input");
 const taskStatus = document.getElementById("status");
 
 // VARIABLES FOR TASK
+let isEdited = false;
+let editedIndex = -1;
 const tasks = [
   {
-    name: "Task Two",
+    name: "Task one",
     status: "INPROGRESS",
-    border: "YELLOW",
+  },
+  {
+    name: "Task two",
+    status: "BLOCKED",
   },
   {
     name: "Task Three",
@@ -27,30 +32,33 @@ function zurah() {
   taskDoneList.innerHTML = "";
   taskBlockedList.innerHTML = "";
 
+  "Hello" + "World";
+  5 + 5;
+  const a = 100;
+  // Welcome - 100 - city - 100 - "world"
+  "Welcome - " + a + " - city - " + a + '"world"';
+  `Welcome 
+  - ${a} - city - 100 - "world"`;
+
   for (let i = 0; i < tasks.length; i++) {
-    console.log("i", i);
     console.log("TASKS", tasks);
     const newTaskCard = `
-    <div class="d-flex justify-content-between align-items-center border border-1 rounded p-2 ${statusColor(
-      tasks[i].status
-    )}"}>
+    <div class="d-flex justify-content-between align-items-center border border-1 border-danger rounded p-2">
     <span>${tasks[i].name} - ${i}</span>
     <div>
-        <button class="btn" onclick={editTask()}>
+        <button class="btn"  data-bs-toggle="modal" data-bs-target="#taskModal" onclick="taskEdit(${i})">
         <i class="bi bi-pencil"></i>
         </button>
-        <button class="btn" onclick={deleteTask(${i})}>
-        <i class="bi bi-trash"></i>
+        <button class="btn">
+        <i class="bi bi-trash" onclick="deleteTask(${i})"></i>
         </button>
     </div>
     </div>
  `;
-    console.log("n0", newTaskCard);
 
     switch (tasks[i].status) {
       case "TODO": {
         taskTodoList.innerHTML += newTaskCard;
-
         break;
       }
       case "INPROGRESS": {
@@ -69,47 +77,46 @@ function zurah() {
         console.log("ALDAA GARLAA");
       }
     }
-
-    function statusColor(status) {
-      switch (status) {
-        case "TODO": {
-          return "border-black";
-        }
-        case "INPROGRESS": {
-          return "border-warning";
-        }
-        case "DONE": {
-          return "border-success";
-        }
-        case "BLOCKED": {
-          return "border-danger";
-        }
-        default: {
-          console.log("ALDAA GARLAA");
-        }
-      }
-    }
   }
 }
 
-saveBtn.addEventListener("click", function () {
-  const newTask = {
-    name: taskInput.value,
-    status: taskStatus.value,
-  };
-  tasks.push(newTask);
-  zurah();
-  console.log("TASKS", tasks);
-});
-
 zurah();
 
-function editTask() {
-  console.log("edit");
-}
+saveBtn.addEventListener("click", function () {
+  if (isEdited) {
+    tasks[editedIndex].name = taskInput.value;
+    tasks[editedIndex].status = taskStatus.value;
+    isEdited = false;
+  } else {
+    const newTask = {
+      name: taskInput.value,
+      status: taskStatus.value,
+    };
+    tasks.push(newTask);
+  }
+  taskInput.value = "";
+  taskStatus.value = "TODO";
+  zurah();
+});
 
-function deleteTask(taskIndex) {
-  console.log("ti", taskIndex);
+const deleteTask = (taskIndex) => {
   tasks.splice(taskIndex, 1);
   zurah();
-}
+};
+
+const taskEdit = (taskIndex) => {
+  console.log(taskIndex);
+  taskInput.value = tasks[taskIndex].name;
+  taskStatus.value = tasks[taskIndex].status;
+
+  isEdited = true;
+  editedIndex = taskIndex;
+};
+
+// const list = document.querySelectorAll(".item");
+
+// console.log(list);
+
+// list.forEach((s) => {
+//   console.log("o", s);
+// });
