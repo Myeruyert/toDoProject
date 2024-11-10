@@ -3,179 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/7f03016920.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>To Do Project</title>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <title>Todop Application</title>
   </head>
-  <body class="text-white">
-    <section class="bg-dark d-flex align-items-center justify-content-center">
-      <main class="m-auto main">
-        <div class="d-flex justify-content-end mb-4">
-          <!-- data-bs-toggle="modal"
+  <body class="bg-dark">
+    <!-- Todo -->
+    <!-- data-bs-toggle="modal"
           data-bs-target="#taskModal" -->
-          <button class="add btn btn-success">Add task</button>
-        </div>
-        <div class="container d-flex gap-4">
-          <div
-            class="box-height col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
-          >
-            <div class="d-flex justify-content-between">
-              <h2 class="header">
-                <i class="fa-solid fa-circle align-middle"></i
-                ><span class="ms-2">To Do</span>
-              </h2>
-              <p class="text-white-50 repeat fs-6">5</p>
-            </div>
-            <div class="taskToDoList">
-              <div
-                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
-              >
-                <button class="checkbox text-white-50 bg-transparent border-0">
-                  <i class="fa-regular fa-circle fs-6"></i>
-                </button>
-                <span class="text-white-50"
-                  >[Loan management]- Add a card component</span
-                >
-                <button class="edit text-white-50 bg-transparent border-0 fs-6">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
-                <button class="delete text-danger bg-transparent border-0 fs-6">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="box-height col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
-          >
-            <div class="d-flex justify-content-between">
-              <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-warning"></i
-                ><span class="ms-2">In Progress</span>
-              </h2>
-              <p class="text-white-50 repeat fs-6">5</p>
-            </div>
-            <div class="taskProgressList">
-              <div
-                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
-              >
-                <button class="checkbox text-white-50 bg-transparent border-0">
-                  <i class="fa-regular fa-circle fs-6"></i>
-                </button>
-                <span class="text-white-50"
-                  >[Loan management]- Add a card component</span
-                >
-                <button class="edit text-white-50 bg-transparent border-0 fs-6">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
-                <button class="delete text-danger bg-transparent border-0 fs-6">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="box col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
-          >
-            <div class="d-flex justify-content-between">
-              <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-success"></i
-                ><span class="ms-2">Done</span>
-              </h2>
-              <p class="text-white-50 repeat fs-6">5</p>
-            </div>
-            <div class="taskDoneList">
-              <div
-                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
-              >
-                <button class="checkbox text-white-50 bg-transparent border-0">
-                  <i class="fa-regular fa-circle fs-6"></i>
-                </button>
-                <span class="text-white-50"
-                  >[Loan management]- Add a card component</span
-                >
-                <button class="edit text-white-50 bg-transparent border-0 fs-6">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
-                <button class="delete text-danger bg-transparent border-0 fs-6">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="box col-sm-12 col-md-6 col-lg-3 bg-black border border-secondary rounded p-sm-3"
-          >
-            <div class="d-flex justify-content-between">
-              <h2 class="header">
-                <i class="fa-solid fa-circle align-middle text-danger"></i
-                ><span class="ms-2">Blocked</span>
-              </h2>
-              <p class="text-white-50 repeat fs-6">5</p>
-            </div>
-            <div class="taskBlockedList">
-              <div
-                class="task rounded bg-dark d-flex align-items-center gap-2 p-sm-3 my-2"
-              >
-                <button class="checkbox text-white-50 bg-transparent border-0">
-                  <i class="fa-regular fa-circle fs-6"></i>
-                </button>
-                <span class="text-white-50"
-                  >[Loan management]- Add a card component</span
-                >
-                <button class="edit text-white-50 bg-transparent border-0 fs-6">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
-                <button class="delete text-danger bg-transparent border-0 fs-6">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <div class="taskAdder display bg-dark rounded m-auto">
-        <h4>Enter Task</h4>
-        <input
-          type="text"
-          name=""
-          id=""
-          placeholder="Task name.."
-          class="my-2 bg-transparent border border-secondary"
-        />
-        <input
-          type="tel"
-          name=""
-          id=""
-          placeholder="Select status"
-          class="my-2 bg-transparent border border-secondary"
-        />
-        <button class="submit btn btn-success mt-4 text-center fs-6">
-          Submit
+    <div class="container mt-5">
+      <div class="d-flex justify-content-end mb-3">
+        <button
+          class="btn btn-success"
+          id="addTaskBtn"
+          data-bs-toggle="modal"
+          data-bs-target="#taskModal">
+          Add task
         </button>
       </div>
-    </section>
-    <!-- modal -->
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button>
+      <div class="row gy-5">
+        <div class="col">
+          <div
+            style="height: 80vh"
+            class="card card-width bg-black border border-1 border-secondary">
+            <div
+              class="card-header d-flex justify-content-between text-secondary">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-circle-fill text-white mr-2"></i>
+                <span class="fs-5">To do</span>
+              </div>
 
+              <span>5</span>
+            </div>
+            <div class="card-body" id="taskTodoList">
+              <!-- Card -->
+
+              <!-- Card -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            style="height: 80vh"
+            class="card card-width border border-1 border-secondary bg-black">
+            <div
+              class="card-header d-flex justify-content-between text-secondary">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-circle-fill text-warning pr-2"></i>
+                <span class="fs-5">In Progress</span>
+              </div>
+
+              <span>5</span>
+            </div>
+            <div class="card-body" id="taskProgressList"></div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            style="height: 80vh"
+            class="card card-width bg-black border border-1 border-secondary">
+            <div
+              class="card-header d-flex justify-content-between text-secondary">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-circle-fill text-success mr-2"></i>
+                <span class="fs-5">Done</span>
+              </div>
+
+              <span>5</span>
+            </div>
+            <div class="card-body" id="taskDoneList"></div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            style="height: 80vh"
+            class="card card-width bg-black border border-1 border-secondary">
+            <div
+              class="card-header d-flex justify-content-between text-secondary">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-circle-fill text-danger mr-2"></i>
+                <span class="fs-5">Blocked</span>
+              </div>
+
+              <span>5</span>
+            </div>
+            <div class="card-body" id="taskBlockedList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Todo -->
     <!-- Modal -->
     <div class="modal fade" id="taskModal" tabindex="-1">
       <div class="modal-dialog">
@@ -186,8 +108,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+              aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <label for="exampleFormControlInput1" class="form-label"
@@ -197,8 +118,7 @@
               type="text"
               class="form-control"
               id="task-input"
-              placeholder="add new task"
-            />
+              placeholder="add new task" />
             <select name="status" id="status">
               <option value="TODO">To do</option>
               <option value="INPROGRESS">Хийж байгаа</option>
@@ -218,20 +138,27 @@
               type="button"
               class="btn btn-primary"
               id="save-btn"
-              data-bs-dismiss="modal"
-            >
+              data-bs-dismiss="modal">
               Хадгалах
             </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- modal-end -->
-    <script src="./main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
+
+<!-- <div class="d-flex justify-content-between align-items-center border border-1 rounded p-2">
+    <span>Add card component</span>
+    <div>
+        <button class="btn">
+            <i class="bi bi-pencil"></i>
+        </button>
+        <button class="btn">
+            <i class="bi bi-trash"></i>
+        </button>
+    </div>
+</div> -->

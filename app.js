@@ -43,14 +43,14 @@ function zurah() {
   for (let i = 0; i < tasks.length; i++) {
     console.log("TASKS", tasks);
     const newTaskCard = `
-    <div class="d-flex justify-content-between align-items-center border border-1 border-danger rounded p-2">
-    <span>${tasks[i].name} - ${i}</span>
+    <div class="d-flex justify-content-between align-items-center rounded p-2 bg-dark text-white mb-3 ">
+    <span class="text-seconary">${tasks[i].name}</span>
     <div>
         <button class="btn"  data-bs-toggle="modal" data-bs-target="#taskModal" onclick="taskEdit(${i})">
-        <i class="bi bi-pencil"></i>
+        <i class="bi bi-pencil text-secondary"></i>
         </button>
         <button class="btn">
-        <i class="bi bi-trash" onclick="deleteTask(${i})"></i>
+        <i class="bi bi-trash text-danger" onclick="deleteTask(${i})"></i>
         </button>
     </div>
     </div>
