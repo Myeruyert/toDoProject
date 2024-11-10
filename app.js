@@ -54,7 +54,7 @@ function zurah() {
     <div class="d-flex justify-content-between align-items-center border border-1 bg-dark text-white-50 my-2 rounded p-2 ${statusColor(
       tasks[i].status
     )}"}>
-      <span>${tasks[i].name} - ${i}</span>
+      <span>${tasks[i].name}</span>
       <div>
         <button class="btn"           
           data-bs-toggle="modal"
